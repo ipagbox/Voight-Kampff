@@ -54,7 +54,7 @@ module VoightKampff
     end
 
     def crawlers
-      @@crawlers ||= JSON.load(File.open(preferred_path, 'r'))
+      @@crawlers ||= Oj.load(File.open(preferred_path, 'r'))
     end
   end
 end
